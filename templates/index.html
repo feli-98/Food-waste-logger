@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Food Waste Logger</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 50px; }
+    form { padding: 20px; background: #f9f9f9; width: 300px; border-radius: 10px; }
+    select, input, button { margin: 10px 0; padding: 8px; width: 100%; }
+    button { background: green; color: white; border: none; cursor: pointer; }
+    button:hover { background: darkgreen; }
+  </style>
+</head>
+<body>
+  <h2>Welcome to Feli's AI Food Waste Logger</h2>
+  <form method="POST" action="/submit">
+    <label>Ingredient:</label>
+    <select name="ingredient">
+      <option value="rice">Rice</option>
+      <option value="ugali">Ugali</option>
+      <option value="beans">Beans</option>
+      <option value="potatoes">Potatoes</option>
+      <option value="chapati">Chapati</option>
+      <option value="cabbage">Cabbage</option>
+    </select>
+
+    <label>Quantity (e.g. 2 cups):</label>
+    <input type="text" name="quantity" required>
+
+    <button type="submit">Get Suggestions</button>
+  </form>
+
+  <p><a href="/history">View History</a></p>
+</body>
+</html>
